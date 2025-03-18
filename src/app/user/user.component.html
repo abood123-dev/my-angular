@@ -1,0 +1,16 @@
+<div class="userr">
+    <div class="firstr">
+   <div class="fetchfor">
+    Fetch for a single user
+   </div>
+   <div class="secondr" >
+    <input type="number" [(ngModel)]="Userid" placeholder="Enter User ID" class="idin" />
+  <button (click)="fetchuser()" class="get">Get User</button>
+   </div>
+   </div>
+    <div *ngIf="user" class="fetcheduser">
+        <img [src]="user.avatar" alt="User Avatar" />
+        <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+        <p>Email: {{ user.email }}</p>
+      </div>
+</div>

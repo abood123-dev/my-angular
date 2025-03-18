@@ -1,0 +1,28 @@
+.userd
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.tohome
+{
+    color: red;
+    background-color: black;
+    border: 1px solid red;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    transition: ease-out 0.5s;
+}
+.tohome:hover
+{
+  background-color: red;
+  color: black;
+  border: none;
+}

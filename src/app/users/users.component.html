@@ -1,0 +1,16 @@
+<div *ngIf="users" class="users" >
+  <div *ngFor="let user of paginatedUsers" class="oneuser" (click)="goToUserDetails(user.id)">
+  <img [src]="user.avatar" class="avatar"/>
+  <h2 class="username">{{user.first_name}} {{user.last_name}}</h2>
+  </div>
+  <div class="pagination">
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage * usersPerPage >= users.length">
+      Next
+    </button>
+  </div>
+</div>
+<div *ngIf="loading" class="loading-container">
+  <div class="loading-circle"></div>
+</div>
